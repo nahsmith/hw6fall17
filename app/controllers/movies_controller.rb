@@ -62,7 +62,17 @@ class MoviesController < ApplicationController
   end
   
   def search_tmdb
-    @movies=Movie.find_in_tmdb(params[:search_terms])
+    @movies=Movie.find_in_tmdb(params[:search_box])
   end
 
+  def add_tmdb
+    titles = params[:tmdb_movies].keys
+    titles.each do |movie_title|
+      movie = Tmdb::Movie.find(movie_title)
+      ########## need to get ratting ##########
+      Movie.create!(:title => movie[0].title, :rating => 'NC-17', :release_date => movie[0].release_date)
+    end
+    redirect_to movies_path
+  end
+  
 end

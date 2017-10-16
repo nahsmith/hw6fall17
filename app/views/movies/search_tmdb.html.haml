@@ -1,4 +1,6 @@
-%h1 The following movies conatinin '' were found on TMDb
+- string = "The following movies containing ' ' were found on TMDb"
+
+%h1= string
 
 %table#movies
   %thead
@@ -8,12 +10,14 @@
       %th Release Date
       %th Select
   %tbody
+  = form_tag :action => 'add_tmdb' do
     - @movies.each do |movie|
       %tr
         %td= movie.title
-        %td= movie.title
-        // ratings
+        /***** ratings *****/
+        %td= 'NC-17'
         %td= movie.release_date
-        %td= check_box_tag "select"
+        %td=check_box_tag "tmdb_movies[#{movie.title}]"
+    = submit_tag "Add Selected Movies"
 
 = link_to 'Return to Movie List', movies_path

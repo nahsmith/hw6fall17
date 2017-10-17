@@ -40,4 +40,6 @@ Have fun.
 
 =end
 
-heroku IP: https://intense-tor-56960.herokuapp.com/
+heroku IP: https://obscure-anchorage-98241.herokuapp.com/
+
+heroku repo IP: https://git.heroku.com/obscure-anchorage-98241.git

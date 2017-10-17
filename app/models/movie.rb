@@ -14,5 +14,3 @@ class Movie < ActiveRecord::Base
     end
   end
 end
-
-# new push comment

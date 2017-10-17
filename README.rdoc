@@ -38,6 +38,6 @@ Ctrl-c
 
 Have fun.
 
-heroku IP: https://secure-garden-70190.herokuapp.com/
-
 =end
+
+heroku IP: https://intense-tor-56960.herokuapp.com/
